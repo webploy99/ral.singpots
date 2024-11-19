@@ -247,71 +247,10 @@
     </div>
   </footer>
 
-
-  <!-- popup1 -->
-  <div class="popup1 w-full h-screen bg-[#0a0908]/65 hidden justify-center items-center fixed top-0 left-0 p-3" id="PopUp1">
-    <div class="box max-w-[668px] w-full bg-white p-6 sm:px-8 rounded-lg relative">
-        <button class="absolute top-3 right-3 text-red-600 text-2xl"><ion-icon onclick="HidePopUp()" name="close" class="border border-white shadow"></ion-icon></button>
-        <div class="text-lg text-gray-700 py-5 font-[500] flex gap-1">
-            <div><ion-icon name="arrow-redo" class="text-xl text-[#fcbf49] mt-1"></ion-icon></div>
-            <p>주식 투자에 관심이 있으신가요?  현재 우리는 금융주와 반도체주에 대해 좀 더 낙관적이다. 현 상황에서 일부 주식의 가격은 상승할 수밖에 없다.</p>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-between items-center tracking-wider text-md text-white font-semibold *:text-center gap-4 *:w-full *:text-md *:py-2.5 *:rounded-lg  *:cursor-pointe">
-            <button onClick="ShowPopUp2()" class="bg-[#fcbf49]">
-              나는 이것에 관심이 있습니다.
-            </button>
-            <button onclick="amazonUrl()" class="bg-red-500">
-              저는 이 부분에는 관심이 없습니다.
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- popup2 -->
-<div class="popup2 w-full h-screen bg-[#00000056] hidden justify-center items-center fixed top-0 left-0 p-3" id="PopUp2">
-    <div class="box max-w-[668px] w-full bg-white p-6 sm:px-8 rounded-lg relative">
-        <button class="absolute top-3 right-3 text-red-600 text-2xl"><ion-icon onclick="HidePopUp()" name="close" class="border border-white shadow"></ion-icon></button>
-        <div class="text-lg text-gray-700 py-5 font-[500] flex gap-1">
-            <div><ion-icon name="arrow-redo" class="text-xl text-[#fcbf49] mt-1"></ion-icon></div>
-            <p>우리와 함께 강사님의 강의를 들어보실래요?</p>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-between items-center tracking-wider text-white font-semibold *:text-center gap-5 sm:gap-4 *:w-full text-md *:py-2.5 *:rounded-lg  *:cursor-pointer">
-            <button onclick="url()" class="bg-[#fcbf49]">
-              나는 가입할 수 있다.
-            </button>
-            <button onclick="amazonUrl()" class="bg-red-500">
-              나는 가입하고 싶지 않습니다.
-            </button>
-        </div>
-    </div>
-  </div>
-
   <script>
     function url() {
         fbq('track', 'Purchase');
         location.href="";
-    }
-
-    function amazonUrl() {
-      location.href = "https://www.amazon.com/";
-    }
-
-    let popup1 = document.getElementById("PopUp1");
-    let popup2 = document.getElementById("PopUp2");
-
-    function togglePopup(showPopup, hidePopup) {
-      showPopup.style.display = "flex";
-      hidePopup.style.display = "none";
-    }
-    function ShowPopUp1() {
-      togglePopup(popup1, popup2);
-    }
-    function ShowPopUp2() {
-      togglePopup(popup2, popup1);
-    }
-    function HidePopUp() {
-      popup1.style.display = "none";
-      popup2.style.display = "none";
     }
   </script>
 </body>
